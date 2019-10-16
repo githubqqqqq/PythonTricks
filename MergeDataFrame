@@ -1,0 +1,2 @@
+df_all=df1.merge(df2,how='left',left_on='ID', right_on='ID')
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.merge.html
