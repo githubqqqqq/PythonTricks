@@ -1,1 +1,5 @@
+##and condition
 df_new=df[df["var1"]==1 & ["var2"]==1]
+
+##or condition
+df_new = df[(df.a != -1) | (df.b != -1)]
