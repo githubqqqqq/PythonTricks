@@ -1,3 +1,5 @@
+ref: https://jamesrledoux.com/code/group-by-aggregate-pandas
+
 data = {"Team": ["Red Sox", "Red Sox", "Red Sox", "Red Sox", "Red Sox", "Red Sox", "Yankees", "Yankees", "Yankees", "Yankees", "Yankees", "Yankees"],
 "Pos": ["Pitcher", "Pitcher", "Pitcher", "Not Pitcher", "Not Pitcher", "Not Pitcher", "Pitcher", "Pitcher", "Pitcher", "Not Pitcher", "Not Pitcher", "Not Pitcher"],
 "Age": [24, 28, 40, 22, 29, 33, 31, 26, 21, 36, 25, 31],
@@ -8,3 +10,5 @@ print(df)
 grouped_single = df.groupby('Team').agg({'Age': ['mean', 'min', 'max'],'Age2': ['sum']})
 
 print(grouped_single)
+
+
