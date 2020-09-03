@@ -1,0 +1,4 @@
+path_base = '//path/path/path'
+path_ext = '/path1/path1/path1'
+path = Path(path_base + path_ext)
+os.chdir(path)
