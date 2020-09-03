@@ -1,0 +1,8 @@
+
+set mydate=%date:~10,4%%date:~4,2%%date:~7,2%
+set root=C:\ProgramData\Anaconda3
+
+call %root%\Scripts\activate exact_environment_name
+
+
+python "I:\Qi\Auto Job\Low Score SQL\Pull Low Score SQL AB Flag.py" 1>"I:\path\Log\name_%mydate%.log" 2>"I:\pathLog\name.log"
