@@ -1,4 +1,4 @@
 ##Open Anaconda prompt (root)
 ##type in below, replace myenv with the name, when asked, click on y
 
-conda create --name myenv
+conda create --name ENVNAME python=3.7
