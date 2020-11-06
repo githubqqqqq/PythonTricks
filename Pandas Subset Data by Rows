@@ -3,3 +3,8 @@ df_new=df[df["var1"]==1 & ["var2"]==1]
 
 ##or condition
 df_new = df[(df.a != -1) | (df.b != -1)]
+
+##use loc 
+tasks1.loc[(tasks1['TWO_WAY']>=1) |(tasks1['TWO_WAY']<=3)  ]
+
+
