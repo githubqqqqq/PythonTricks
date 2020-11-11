@@ -87,5 +87,24 @@ daily_reserve.head()
 # In[ ]:
 
 
+####run directly without creating a table
+from sqlalchemy import create_engine
+from sqlalchemy.exc import SQLAlchemyError
+
+from pathlib import Path
+import os
+from datetime import date, datetime, timedelta
+import pandas as pd
+import time
+
+path_base = '//path/path'
+path_ext = '/path'
+path = Path(path_base + path_ext)
+os.chdir(path)
+
+engine = create_engine("mssql+pyodbc:// : @BIA_DM")
+query = open("code_name.sql").read()
+with engine.connect() as con:
+    con.execute(query) 
 
 
