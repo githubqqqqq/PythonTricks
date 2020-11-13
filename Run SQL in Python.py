@@ -106,5 +106,5 @@ engine = create_engine("mssql+pyodbc:// : @BIA_DM")
 query = open("code_name.sql").read()
 with engine.connect() as con:
     con.execute(query) 
-
+##the query needs to be clear, no comments, only queries that generate tables, no print results. when dropping table needs drop table xxx if exists
 
