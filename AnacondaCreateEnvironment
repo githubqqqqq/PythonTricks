@@ -2,3 +2,15 @@
 ##type in below, replace myenv with the name, when asked, click on y
 
 conda create --name ENVNAME python=3.7
+
+##List of all environments
+
+conda env list
+
+##Activate environments
+
+conda activate name_of_environment
+
+##Install a package after activation
+
+pip install xxx
