@@ -14,3 +14,4 @@ conda activate name_of_environment
 ##Install a package after activation
 
 pip install xxx
+pip install --upgrade google-api-python-client
