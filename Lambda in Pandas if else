@@ -1,0 +1,8 @@
+df['category'] = df.apply(lambda x: 'Resend' if  ('resend' in x.EmailName.lower() ) \
+                          else 'Welcome' if ('welcome' in x.EmailName.lower()) \
+                          else 'Other' , axis=1) 
+                          ##axis=1 means it applys to rows
+                          
+df_group['open_date']=df_group.apply(lambda x: x.UniqueOpens/x.Sends, axis=1)
+df_group['click_to_open_rate']=df_group.apply(lambda x: x.UniqueClicks/x.UniqueOpens if x.UniqueOpens>0 else -1, axis=1)
+                          
