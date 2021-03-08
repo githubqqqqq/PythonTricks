@@ -1,0 +1,1 @@
+df_raw['SendDate']=pd.to_datetime(df_raw['Send Date'])
