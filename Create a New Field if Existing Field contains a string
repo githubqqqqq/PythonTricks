@@ -1,0 +1,2 @@
+df['brand'] =  df['Domain'].apply( lambda x:'BLACK+DECKER' if 'blackanddecker' in x 
+                                           else 'other' )
