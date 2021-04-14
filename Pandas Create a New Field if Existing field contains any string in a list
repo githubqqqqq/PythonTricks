@@ -1,0 +1,2 @@
+df['brand_or_not']= df['Web Analytics Keyword'].apply( lambda x:'branded' if any([k in x for k in list]) 
+                                           else 'non-branded' )
