@@ -1,1 +1,4 @@
-df_raw['SendDate']=pd.to_datetime(df_raw['Send Date'])
+df_raw['SendDate']=pd.to_datetime(df_raw['Send Date']) ##this gives datetime
+
+
+df_raw['SendDate']=pd.to_datetime(df_raw['Send Date']).dt.date ##converts to date
