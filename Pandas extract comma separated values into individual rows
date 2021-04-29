@@ -1,0 +1,5 @@
+df_new=df.set_index(['Brand','MEU']).trade_upper.str.split(',', expand=True).stack().reset_index(['Brand','MEU'])
+df_new=df_new.rename(columns={0:"trade"})
+
+
+https://stackoverflow.com/questions/41244981/how-to-extract-comma-separated-values-to-individual-rows-in-pandas
