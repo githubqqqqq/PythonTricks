@@ -108,3 +108,28 @@ with engine.connect() as con:
     con.execute(query) 
 ##the query needs to be clear, no comments, only queries that generate tables, no print results. when dropping table needs drop table xxx if exists
 
+================================================================
+import pandas as pd
+import datetime
+import pyodbc
+import os
+ 
+
+path_base = 'H:/xxx'
+path_ext = '/xxx'
+path = Path(path_base + path_ext)
+os.chdir(path)
+
+
+conn = pyodbc.connect('DSN=xxx;Trusted_Connection=yes;')
+
+strQuery= open("xxx.sql").read()
+##this query creates a temp table called #ttt
+conn.execute(strQuery)
+
+sql="""
+    SELECT * FROM #ttt
+"""
+
+df = pd.read_sql(sql=sql, con=conn)
+
