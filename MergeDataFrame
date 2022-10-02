@@ -6,3 +6,6 @@ results = (opportunity.merge(task, how="left", on ="Oppsfid")
                     .query('oppdate > taskdate')
                     )
 
+
+df_agg = df_agg_cohort_conv.merge(df_agg_cohort, how="left", on =["Channel","Created_year", "Created_month"],\
+                                  suffixes=('_x', '_y'))
