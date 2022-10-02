@@ -12,3 +12,9 @@ grouped_single = df.groupby('Team').agg({'Age': ['mean', 'min', 'max'],'Age2': [
 print(grouped_single)
 
 
+
+df_agg_cohort_conv= df.groupby(["Channel","Created_year", "Created_month","Start_year","Start_month"]).\
+         agg({'LeadCD': ['count'], 'started': ['sum']}).reset_index()\
+        .rename(columns={'LeadCD count':'Leads','started count':'started' })
+        
+
