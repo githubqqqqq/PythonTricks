@@ -1,0 +1,1 @@
+df['started'] = df.apply(lambda x: 0 if pd.isnull(x['SessionStartDate']) else 1, axis=1)
