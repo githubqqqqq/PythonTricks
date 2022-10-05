@@ -1,0 +1,2 @@
+ids = df_all["Student_Email"]
+df_all[ids.isin(ids[ids.duplicated()])].sort_values("Student_Email")
