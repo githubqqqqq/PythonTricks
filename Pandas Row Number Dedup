@@ -1,0 +1,13 @@
+print(df_salesforce['Student_Email'].nunique())
+print(df_salesforce.shape[0])
+
+df_salesforce['row_number'] = df_salesforce.groupby("Person ID")['Submission Date'].rank(method="first", ascending=False)
+##person id is the partition by
+##submission date is the order by field
+##first is the method of the order: ascending identifies how it should be ordered
+
+#qc
+df_salesforce['row_number'] = df_salesforce.groupby("Person ID")['Submission Date'].rank(method="first", ascending=False)
+ids = df_salesforce.loc[df_salesforce.row_number==2]['Student_Email']
+df_salesforce.merge(ids,how='inner',on='Student_Email').sort_values(by=['Student_Email','Submission Date'], ascending=False)
+df_salesforce_dedup=df_salesforce.loc[df_salesforce.row_number==1]
