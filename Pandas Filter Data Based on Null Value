@@ -1,0 +1,2 @@
+df_pre_disenrolled_dedup.loc[(df_pre_disenrolled_dedup.variablename.notnull())]
+df_pre_disenrolled_dedup.loc[(df_pre_disenrolled_dedup.variablename.isnull())]
