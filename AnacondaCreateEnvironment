@@ -16,3 +16,7 @@ conda activate name_of_environment
 pip install xxx
 pip install --upgrade google-api-python-client
 pip install --upgrade oauth2client
+
+##check versions
+python --version
+pip --version
